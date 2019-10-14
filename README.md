@@ -1,21 +1,9 @@
 # Phonebook
 
-**TODO: Add description**
+## Example
 
-## Installation
+{:ok, db} = Depo.open(:memory)
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `phonebook` to your list of dependencies in `mix.exs`:
+Phonebook.init(db)
 
-```elixir
-def deps do
-  [
-    {:phonebook, "~> 0.1.0"}
-  ]
-end
-```
-
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/phonebook](https://hexdocs.pm/phonebook).
-
+Phonebook.write_contact(db, "John", "+55599888777444")
